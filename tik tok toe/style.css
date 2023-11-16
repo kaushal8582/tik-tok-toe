@@ -1,0 +1,143 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #54f4;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(237, 233, 48);
+    padding-top: 25px;
+}
+ul li{
+    list-style: none;
+    padding-left: 20px;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.gameContainer{
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    display: grid;
+    grid-template-rows:repeat(3,10vw);
+    grid-template-columns:repeat(3,10vw);
+}
+.box{
+    margin: 3px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7vw;
+    font-family: sans-serif;
+    background-color: gray;
+    border-radius: 23px;
+}
+.box:hover{
+    background-color: rgb(209, 190, 226);
+    cursor: pointer;
+}
+
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+.gameinfo{
+    padding: 0 45px;
+    font-family: 'Baloo Bhaina 2', sans-serif;
+}
+
+#reset{
+    padding: 0.8vw 3vw;
+    border-radius: 24px;
+    border: none;
+    margin-top: 50px;
+    font-size: 1.2vw;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#cTurn{
+    color: yellow;
+
+}
+#reset:hover{
+    scale: 0.8;
+}
+
+.winner{
+    background-color: white;
+    padding: 5vw 7vw;
+    border-radius: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 7px 10px black;
+    font-family: sans-serif;
+}
+.bk{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 100px);
+    background-color: rgba(128, 128, 128, 0.496);
+}
+
+.btn h2{
+    /* line-height: 20px; */
+    margin-top: 20px;
+    height: 40px;
+
+    background-color: gray;
+    text-align: center;
+    padding: 0vw 3vw;
+    border-radius: 20px;
+    width: fit-content;
+}
+@media (max-width:555px) {
+    ul li{
+        font-size: 10vw;
+        text-align: center;
+    } 
+    .gameContainer{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .container{
+        grid-template-rows:repeat(3,24vw);
+        grid-template-columns:repeat(3,24vw);
+    }
+    #reset{
+        text-align: center;
+        font-size: 9vw;
+        font-weight: 600;
+        padding: 2.6vw 7vw;
+    }
+}
